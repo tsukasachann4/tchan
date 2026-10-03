@@ -1,414 +1,449 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Tsukasa</title>
-
-    <style>
-
-        /* =====================================================
-           ✦✦✦ EASY EDITING ✦✦✦
-
-           EVERYTHING YOU NEED TO EDIT IS BELOW.
-           You should not need to touch the rest of the code.
-           ===================================================== */
-
-
-        /* ---------- WEBSITE COLORS ---------- */
-
-        :root {
-            --background: #000000;
-            --text: #FCDCEC;
-
-            --button-background: #111111;
-            --button-text: #FCDCEC;
-
-            --button-hover-background: #FCDCEC;
-            --button-hover-text: #000000;
-
-            --button-border-light: #FCDCEC;
-            --button-border-dark: #555555;
-        }
-
-
-        /* ---------- PAGE TITLE ---------- */
-
-        /* Change the title shown in the browser tab */
-        .website-title {
-            /*
-                This is controlled by the <title> near the
-                bottom of this editing section.
-            */
-        }
-
-
-        /* ---------- MAIN MESSAGE ---------- */
-
-        /*
-           Change the message inside the HTML below.
-
-           You can use:
-           Morse code
-           Atbash
-           Weird symbols
-           Normal text
-           Whatever.
-        */
-
-
-        /* ---------- IMAGE + DESCRIPTION ---------- */
-
-        /*
-           Each button has:
-
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+    <title>Tsukasa</title> 
+ 
+    <style> 
+ 
+        /* ===================================================== 
+           ✦✦✦ EASY EDITING ✦✦✦ 
+ 
+           EVERYTHING YOU NEED TO EDIT IS BELOW. 
+           You should not need to touch the rest of the code. 
+           ===================================================== */ 
+ 
+ 
+        /* ---------- WEBSITE COLORS ---------- */ 
+ 
+        :root { 
+            --background: #000000; 
+            --text: #FCDCEC; 
+ 
+            --button-background: #111111; 
+            --button-text: #FCDCEC; 
+ 
+            --button-hover-background: #FCDCEC; 
+            --button-hover-text: #000000; 
+ 
+            --button-border-light: #FCDCEC; 
+            --button-border-dark: #555555; 
+        } 
+ 
+ 
+        /* ---------- PAGE TITLE ---------- */ 
+ 
+        .website-title { 
+            /* Change the title in the <title> tag above */ 
+        } 
+ 
+ 
+        /* ---------- MAIN MESSAGE ---------- */ 
+ 
+        /* 
+           Change the message inside the HTML below. 
+ 
+           You can use: 
+           Morse code 
+           Atbash 
+           Weird symbols 
+           Normal text 
+           Whatever. 
+        */ 
+ 
+ 
+        /* ---------- IMAGE + DESCRIPTION ---------- */ 
+ 
+        /* 
+           Each button has: 
+ 
            IMAGE:
-           The image it shows.
-
+           1.png / 2.png / 3.png / 4.png
+ 
            DESCRIPTION:
-           The text underneath the image.
-
-           You ONLY need to edit the four sections below.
-        */
+           Edit these in the descriptions section
+           near the bottom of the file.
+        */ 
+ 
+ 
+        /* ===================================================== 
+           PAGE 1 
+           ===================================================== */ 
+ 
+        .page-1 { 
+            /* Image: 1.png */ 
+        } 
+ 
+ 
+        /* ===================================================== 
+           PAGE 2 
+           ===================================================== */ 
+ 
+        .page-2 { 
+            /* Image: 2.png */ 
+        } 
+ 
+ 
+        /* ===================================================== 
+           PAGE 3 
+           ===================================================== */ 
+ 
+        .page-3 { 
+            /* Image: 3.png */ 
+        } 
+ 
+ 
+        /* ===================================================== 
+           PAGE 4 
+           ===================================================== */ 
+ 
+        .page-4 { 
+            /* Image: 4.png */ 
+        } 
+ 
+ 
+        /* ===================================================== 
+           ✦✦✦ END OF EASY EDITING ✦✦✦ 
+           ===================================================== */ 
+ 
+ 
+        body { 
+            margin: 0; 
+            min-height: 100vh; 
+ 
+            background-color: var(--background); 
+            color: var(--text); 
+ 
+            font-family: Arial, sans-serif; 
+ 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        } 
+ 
+ 
+        .page { 
+            text-align: center; 
+            width: 90%; 
+            max-width: 800px; 
+ 
+            padding: 30px 0; 
+        } 
+ 
+ 
+        /* Main image */ 
+ 
+        #main-image { 
+            max-width: 100%; 
+            max-height: 70vh; 
+ 
+            object-fit: contain; 
+        } 
+ 
+ 
+        /* Main Morse/message */ 
+ 
+        .message { 
+            margin-top: 20px; 
+ 
+            color: var(--text); 
+ 
+            font-size: 20px; 
+            line-height: 1.5; 
+ 
+            white-space: pre-line; 
+        } 
+ 
+ 
+        /* Description */ 
+ 
+        #description { 
+            margin-top: 15px; 
+ 
+            color: var(--text); 
+ 
+            font-size: 16px; 
+            line-height: 1.5; 
+ 
+            white-space: pre-line; 
+        } 
+ 
+ 
+        /* ===================================================== 
+           RETRO BUTTONS 
+           ===================================================== */ 
+ 
+        .buttons { 
+            margin-top: 25px; 
+ 
+            display: flex; 
+            justify-content: center; 
+            gap: 10px; 
+ 
+            flex-wrap: wrap; 
+        } 
+ 
+ 
+        .retro-button { 
+            min-width: 55px; 
+ 
+            padding: 8px 16px; 
+ 
+            background-color: var(--button-background); 
+            color: var(--button-text); 
+ 
+            font-family: "Courier New", monospace; 
+            font-size: 16px; 
+            font-weight: bold; 
+ 
+            border-top: 3px solid var(--button-border-light); 
+            border-left: 3px solid var(--button-border-light); 
+ 
+            border-right: 3px solid var(--button-border-dark); 
+            border-bottom: 3px solid var(--button-border-dark); 
+ 
+            box-shadow: 2px 2px 0 #000000; 
+ 
+            cursor: pointer; 
+        } 
+ 
+ 
+        .retro-button:hover { 
+            background-color: var(--button-hover-background); 
+            color: var(--button-hover-text); 
+        } 
+ 
+ 
+        .retro-button:active { 
+            border-top: 3px solid var(--button-border-dark); 
+            border-left: 3px solid var(--button-border-dark); 
+ 
+            border-right: 3px solid var(--button-border-light); 
+            border-bottom: 3px solid var(--button-border-light); 
+ 
+            box-shadow: none; 
+ 
+            transform: translate(2px, 2px); 
+        } 
+ 
+ 
+        .retro-button.active { 
+            background-color: var(--button-hover-background); 
+            color: var(--button-hover-text); 
+ 
+            border-top: 3px solid var(--button-border-dark); 
+            border-left: 3px solid var(--button-border-dark); 
+ 
+            border-right: 3px solid var(--button-border-light); 
+            border-bottom: 3px solid var(--button-border-light); 
+        } 
 
 
         /* =====================================================
-           PAGE 1
+           ARG URL
+           
+           THIS IS INTENTIONALLY NOT CLICKABLE.
+           
+           The player has to decode it and type the result
+           into their browser manually.
            ===================================================== */
 
-        .page-1 {
-            /* Image: 1.png */
-        }
+        .arg-url {
+            margin-top: 45px;
 
-
-        /* =====================================================
-           PAGE 2
-           ===================================================== */
-
-        .page-2 {
-            /* Image: 2.png */
-        }
-
-
-        /* =====================================================
-           PAGE 3
-           ===================================================== */
-
-        .page-3 {
-            /* Image: 3.png */
-        }
-
-
-        /* =====================================================
-           PAGE 4
-           ===================================================== */
-
-        .page-4 {
-            /* Image: 4.png */
-        }
-
-
-        /* =====================================================
-           ✦✦✦ END OF EASY EDITING ✦✦✦
-           ===================================================== */
-
-
-        body {
-            margin: 0;
-            min-height: 100vh;
-
-            background-color: var(--background);
             color: var(--text);
-
-            font-family: Arial, sans-serif;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-        .page {
-            text-align: center;
-            width: 90%;
-            max-width: 800px;
-
-            padding: 30px 0;
-        }
-
-
-        /* Main image */
-
-        #main-image {
-            max-width: 100%;
-            max-height: 70vh;
-
-            object-fit: contain;
-        }
-
-
-        /* Main Morse/message */
-
-        .message {
-            margin-top: 20px;
-
-            color: var(--text);
-
-            font-size: 20px;
-            line-height: 1.5;
-
-            white-space: pre-line;
-        }
-
-
-        /* Description */
-
-        #description {
-            margin-top: 15px;
-
-            color: var(--text);
-
-            font-size: 16px;
-            line-height: 1.5;
-
-            white-space: pre-line;
-        }
-
-
-        /* =====================================================
-           RETRO BUTTONS
-           ===================================================== */
-
-        .buttons {
-            margin-top: 25px;
-
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-
-            flex-wrap: wrap;
-        }
-
-
-        .retro-button {
-            min-width: 55px;
-
-            padding: 8px 16px;
-
-            background-color: var(--button-background);
-            color: var(--button-text);
 
             font-family: "Courier New", monospace;
-            font-size: 16px;
-            font-weight: bold;
+            font-size: 13px;
 
-            border-top: 3px solid var(--button-border-light);
-            border-left: 3px solid var(--button-border-light);
+            word-break: break-all;
 
-            border-right: 3px solid var(--button-border-dark);
-            border-bottom: 3px solid var(--button-border-dark);
-
-            box-shadow: 2px 2px 0 #000000;
-
-            cursor: pointer;
+            user-select: text;
         }
-
-
-        .retro-button:hover {
-            background-color: var(--button-hover-background);
-            color: var(--button-hover-text);
-        }
-
-
-        .retro-button:active {
-            border-top: 3px solid var(--button-border-dark);
-            border-left: 3px solid var(--button-border-dark);
-
-            border-right: 3px solid var(--button-border-light);
-            border-bottom: 3px solid var(--button-border-light);
-
-            box-shadow: none;
-
-            transform: translate(2px, 2px);
-        }
-
-
-        .retro-button.active {
-            background-color: var(--button-hover-background);
-            color: var(--button-hover-text);
-
-            border-top: 3px solid var(--button-border-dark);
-            border-left: 3px solid var(--button-border-dark);
-
-            border-right: 3px solid var(--button-border-light);
-            border-bottom: 3px solid var(--button-border-light);
-        }
-
-    </style>
-</head>
-
-
-<body>
-
-    <div class="page">
-
-
-        <!-- =================================================
-             TITLE
-             ================================================= -->
-
-        <h1 class="website-title" style="display:none;">
-            Tchan
-        </h1>
-
-
-        <!-- =================================================
-             MAIN IMAGE
-             ================================================= -->
-
-        <img
-            id="main-image"
-            src="1.png"
-            alt="Image 1"
-        >
-
-
-        <!-- =================================================
-             MAIN MESSAGE
-
-             ✦ EDIT THIS ✦
-             ================================================= -->
-
-        <div class="message">
-
-            -.. --- / -.-- --- ..- / - .... .. -. -.- /
-            - -.-. .... .- -. / .. ... / -.. . .- -.. ..--.. /
-            .. / - .... .. -. -.- / - -.-. .... .- -.
-
+ 
+    </style> 
+</head> 
+ 
+ 
+<body> 
+ 
+    <div class="page"> 
+ 
+ 
+        <!-- ================================================= 
+             TITLE 
+             ================================================= --> 
+ 
+        <h1 class="website-title" style="display:none;"> 
+            Tchan 
+        </h1> 
+ 
+ 
+        <!-- ================================================= 
+             DEFAULT IMAGE
+             
+             This appears before ANY button is clicked.
+             ================================================= --> 
+ 
+        <img 
+            id="main-image" 
+            src="kangel.jpeg" 
+            alt="KAngel" 
+        > 
+ 
+ 
+        <!-- ================================================= 
+             MAIN MESSAGE 
+ 
+             ✦ EDIT THIS ✦ 
+             ================================================= --> 
+ 
+        <div class="message"> 
+ 
+            -.. --- / -.-- --- ..- / - .... .. -. -.- / 
+            - -.-. .... .- -. / .. ... / -.. . .- -.. ..--.. / 
+            .. / - .... .. -. -.- / - -.-. .... .- -. 
+ 
+        </div> 
+ 
+ 
+        <!-- ================================================= 
+             DEFAULT DESCRIPTION
+             
+             This appears before ANY button is clicked.
+             ================================================= --> 
+ 
+        <div id="description"> 
+            cant find'
+        </div> 
+ 
+ 
+        <!-- ================================================= 
+             BUTTONS 
+ 
+             ✦ CHANGE THE BUTTON NAMES HERE IF YOU WANT ✦ 
+             ================================================= --> 
+ 
+        <div class="buttons"> 
+ 
+            <button 
+                class="retro-button" 
+                onclick="showPage(1)" 
+            > 
+                1 
+            </button> 
+ 
+            <button 
+                class="retro-button" 
+                onclick="showPage(2)" 
+            > 
+                2 
+            </button> 
+ 
+            <button 
+                class="retro-button" 
+                onclick="showPage(3)" 
+            > 
+                3 
+            </button> 
+ 
+            <button 
+                class="retro-button" 
+                onclick="showPage(4)" 
+            > 
+                4 
+            </button> 
+ 
         </div>
 
 
         <!-- =================================================
-             DESCRIPTION
+             ARG WEBSITE CLUE
+             
+             NOT CLICKABLE.
 
-             This automatically changes when you press
-             one of the numbered buttons.
+             Decode with ATBASH:
+
+             ghfpzhzxszmm4.trgsfy.rl/wlxfvnmgmh
+
+             =
+
+             tsukasachann4.github.io/documents
              ================================================= -->
 
-        <div id="description">
-            Description for image 1 goes here.
+        <div class="arg-url">
+            ghfpzhzxszmm4.trgsfy.rl/wlxfvnmgmh
         </div>
-
-
-        <!-- =================================================
-             BUTTONS
-
-             ✦ CHANGE THE BUTTON NAMES HERE IF YOU WANT ✦
-             ================================================= -->
-
-        <div class="buttons">
-
-            <button
-                class="retro-button active"
-                onclick="showPage(1)"
-            >
-                1
-            </button>
-
-            <button
-                class="retro-button"
-                onclick="showPage(2)"
-            >
-                2
-            </button>
-
-            <button
-                class="retro-button"
-                onclick="showPage(3)"
-            >
-                3
-            </button>
-
-            <button
-                class="retro-button"
-                onclick="showPage(4)"
-            >
-                4
-            </button>
-
-        </div>
-
-
-    </div>
-
-
-    <script>
-
+ 
+ 
+    </div> 
+ 
+ 
+    <script> 
+ 
         /* =====================================================
            ✦✦✦ PAGE CONTENT ✦✦✦
 
-           THIS IS THE ONLY PART OF THE SCRIPT YOU NEED
-           TO EDIT FOR YOUR FOUR PAGES.
+           EDIT ONLY THE DESCRIPTIONS BELOW.
 
-           Change the text inside "description".
-
-           The images automatically use:
+           The images are automatically:
 
            1.png
            2.png
            3.png
            4.png
 
-           ===================================================== */
-
-
-        const descriptions = {
-
-            1: "5301314",
-
-            2: "praying angel",
-
-            3: "reverse morse atbash code",
-
-            4: "tsukasachann4.neocities.org"
-
-        };
-
-
-        /* =====================================================
-           DO NOT EDIT BELOW THIS LINE
-           ===================================================== */
-
-
-        function showPage(number) {
-
-            document.getElementById("main-image").src =
-                number + ".png";
-
-
-            document.getElementById("main-image").alt =
-                "Image " + number;
-
-
-            document.getElementById("description").textContent =
-                descriptions[number];
-
-
-            const buttons =
-                document.querySelectorAll(".retro-button");
-
-
-            buttons.forEach(function(button) {
-                button.classList.remove("active");
-            });
-
-
-            buttons[number - 1].classList.add("active");
-
-        }
-
-    </script>
-
-</body>
+           ===================================================== */ 
+ 
+ 
+        const descriptions = { 
+ 
+            1: "5301314", 
+ 
+            2: "praying angel", 
+ 
+            3: "reverse morse atbash code", 
+ 
+            4: "tsukasachann4.neocities.org" 
+ 
+        }; 
+ 
+ 
+        /* ===================================================== 
+           DO NOT EDIT BELOW THIS LINE 
+           ===================================================== */ 
+ 
+ 
+        function showPage(number) { 
+ 
+            document.getElementById("main-image").src = 
+                number + ".png"; 
+ 
+ 
+            document.getElementById("main-image").alt = 
+                "Image " + number; 
+ 
+ 
+            document.getElementById("description").textContent = 
+                descriptions[number]; 
+ 
+ 
+            const buttons = 
+                document.querySelectorAll(".retro-button"); 
+ 
+ 
+            buttons.forEach(function(button) { 
+                button.classList.remove("active"); 
+            }); 
+ 
+ 
+            buttons[number - 1].classList.add("active"); 
+ 
+        } 
+ 
+    </script> 
+ 
+</body> 
 </html>
