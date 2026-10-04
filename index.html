@@ -1,3 +1,5 @@
+Continued from Tsukasa Lore Analysis (3)
+
 <!DOCTYPE html> 
 <html lang="en"> 
 <head> 
@@ -447,3 +449,597 @@
  
 </body> 
 </html>
+
+
+Yep. I kept your existing page intact and added the sequence tracking plus button 5.
+
+The sequence is strict: 1 → 2 → 2 → 3 → 3 → 3 → 4 → 4 → 4 → 4. Once that is completed, 5 appears. Pressing 5 changes kangel.jpeg/the current image to everfree.jpeg, and pressing 5 again changes it to rail.mp4.
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+    <title>T chan</title> 
+ 
+    <style> 
+ 
+        /* ===================================================== 
+           ✦✦✦ EASY EDITING ✦✦✦ 
+ 
+           EVERYTHING YOU NEED TO EDIT IS BELOW. 
+           You should not need to touch the rest of the code. 
+           ===================================================== */ 
+ 
+ 
+        /* ---------- WEBSITE COLORS ---------- */ 
+ 
+        :root { 
+            --background: #000000; 
+            --text: #FCDCEC; 
+ 
+            --button-background: #111111; 
+            --button-text: #FCDCEC; 
+ 
+            --button-hover-background: #FCDCEC; 
+            --button-hover-text: #000000; 
+ 
+            --button-border-light: #FCDCEC; 
+            --button-border-dark: #555555; 
+        } 
+ 
+ 
+        /* ---------- PAGE TITLE ---------- */ 
+ 
+        .website-title { 
+            /* Change the title in the <title> tag above */ 
+        } 
+ 
+ 
+        /* ---------- MAIN MESSAGE ---------- */ 
+ 
+        /* 
+           Change the message inside the HTML below. 
+ 
+           You can use: 
+           Morse code 
+           Atbash 
+           Weird symbols 
+           Normal text 
+           Whatever. 
+        */ 
+ 
+ 
+        /* ---------- IMAGE + DESCRIPTION ---------- */ 
+ 
+        /* 
+           Each button has: 
+ 
+           IMAGE:
+           1.png / 2.png / 3.png / 4.png
+ 
+           DESCRIPTION:
+           Edit these in the descriptions section
+           near the bottom of the file.
+        */ 
+ 
+ 
+        /* ===================================================== 
+           PAGE 1 
+           ===================================================== */ 
+ 
+        .page-1 { 
+            /* Image: 1.png */ 
+        } 
+ 
+ 
+        /* ===================================================== 
+           PAGE 2 
+           ===================================================== */ 
+ 
+        .page-2 { 
+            /* Image: 2.png */ 
+        } 
+ 
+ 
+        /* ===================================================== 
+           PAGE 3 
+           ===================================================== */ 
+ 
+        .page-3 { 
+            /* Image: 3.png */ 
+        } 
+ 
+ 
+        /* ===================================================== 
+           PAGE 4 
+           ===================================================== */ 
+ 
+        .page-4 { 
+            /* Image: 4.png */ 
+        } 
+ 
+ 
+        /* ===================================================== 
+           ✦✦✦ END OF EASY EDITING ✦✦✦ 
+           ===================================================== */ 
+ 
+ 
+        body { 
+            margin: 0; 
+            min-height: 100vh; 
+ 
+            background-color: var(--background); 
+            color: var(--text); 
+ 
+            font-family: Arial, sans-serif; 
+ 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        } 
+ 
+ 
+        .page { 
+            text-align: center; 
+            width: 90%; 
+            max-width: 800px; 
+ 
+            padding: 30px 0; 
+        } 
+ 
+ 
+        /* Main image */ 
+ 
+        #main-image { 
+            max-width: 100%; 
+            max-height: 70vh; 
+ 
+            object-fit: contain; 
+        } 
+ 
+ 
+        /* Main Morse/message */ 
+ 
+        .message { 
+            margin-top: 20px; 
+ 
+            color: var(--text); 
+ 
+            font-size: 20px; 
+            line-height: 1.5; 
+ 
+            white-space: pre-line; 
+        } 
+ 
+ 
+        /* Description */ 
+ 
+        #description { 
+            margin-top: 15px; 
+ 
+            color: var(--text); 
+ 
+            font-size: 16px; 
+            line-height: 1.5; 
+ 
+            white-space: pre-line; 
+        } 
+ 
+ 
+        /* ===================================================== 
+           RETRO BUTTONS 
+           ===================================================== */ 
+ 
+        .buttons { 
+            margin-top: 25px; 
+ 
+            display: flex; 
+            justify-content: center; 
+            gap: 10px; 
+ 
+            flex-wrap: wrap; 
+        } 
+ 
+ 
+        .retro-button { 
+            min-width: 55px; 
+ 
+            padding: 8px 16px; 
+ 
+            background-color: var(--button-background); 
+            color: var(--button-text); 
+ 
+            font-family: "Courier New", monospace; 
+            font-size: 16px; 
+            font-weight: bold; 
+ 
+            border-top: 3px solid var(--button-border-light); 
+            border-left: 3px solid var(--button-border-light); 
+ 
+            border-right: 3px solid var(--button-border-dark); 
+            border-bottom: 3px solid var(--button-border-dark); 
+ 
+            box-shadow: 2px 2px 0 #000000; 
+ 
+            cursor: pointer; 
+        } 
+ 
+ 
+        .retro-button:hover { 
+            background-color: var(--button-hover-background); 
+            color: var(--button-hover-text); 
+        } 
+ 
+ 
+        .retro-button:active { 
+            border-top: 3px solid var(--button-border-dark); 
+            border-left: 3px solid var(--button-border-dark); 
+ 
+            border-right: 3px solid var(--button-border-light); 
+            border-bottom: 3px solid var(--button-border-light); 
+ 
+            box-shadow: none; 
+ 
+            transform: translate(2px, 2px); 
+        } 
+ 
+ 
+        .retro-button.active { 
+            background-color: var(--button-hover-background); 
+            color: var(--button-hover-text); 
+ 
+            border-top: 3px solid var(--button-border-dark); 
+            border-left: 3px solid var(--button-border-dark); 
+ 
+            border-right: 3px solid var(--button-border-light); 
+            border-bottom: 3px solid var(--button-border-light); 
+        }
+
+
+        /* =====================================================
+           SECRET BUTTON 5
+           ===================================================== */
+
+        #button5 {
+            display: none;
+        }
+
+
+        /* =====================================================
+           ARG URL
+           
+           THIS IS INTENTIONALLY NOT CLICKABLE.
+           
+           The player has to decode it and type the result
+           into their browser manually.
+           ===================================================== */
+
+        .arg-url {
+            margin-top: 45px;
+
+            color: var(--text);
+
+            font-family: "Courier New", monospace;
+            font-size: 13px;
+
+            word-break: break-all;
+
+            user-select: text;
+        }
+ 
+    </style> 
+</head> 
+ 
+ 
+<body> 
+ 
+    <div class="page"> 
+ 
+ 
+        <!-- ================================================= 
+             TITLE 
+             ================================================= --> 
+ 
+        <h1 class="website-title" style="display:none;"> 
+            Tchan 
+        </h1> 
+ 
+ 
+        <!-- ================================================= 
+             DEFAULT IMAGE
+             
+             This appears before ANY button is clicked.
+             ================================================= --> 
+ 
+        <img 
+            id="main-image" 
+            src="kangel.jpeg" 
+            alt="KAngel" 
+        > 
+ 
+ 
+        <!-- ================================================= 
+             MAIN MESSAGE 
+ 
+             ✦ EDIT THIS ✦ 
+             ================================================= --> 
+ 
+        <div class="message"> 
+ 
+            -.. --- / -.-- --- ..- / - .... .. -. -.- / 
+            - -.-. .... .- -. / .. ... / -.. . .- -.. ..--.. / 
+            .. / - .... .. -. -.- / - -.-. .... .- -. 
+ 
+        </div> 
+ 
+ 
+        <!-- ================================================= 
+             DEFAULT DESCRIPTION
+             
+             This appears before ANY button is clicked.
+             ================================================= --> 
+ 
+        <div id="description"> 
+            rot
+        </div> 
+ 
+ 
+        <!-- ================================================= 
+             BUTTONS 
+ 
+             ✦ CHANGE THE BUTTON NAMES HERE IF YOU WANT ✦ 
+             ================================================= --> 
+ 
+        <div class="buttons"> 
+ 
+            <button 
+                class="retro-button" 
+                onclick="showPage(1)" 
+            > 
+                1 
+            </button> 
+ 
+            <button 
+                class="retro-button" 
+                onclick="showPage(2)" 
+            > 
+                2 
+            </button> 
+ 
+            <button 
+                class="retro-button" 
+                onclick="showPage(3)" 
+            > 
+                3 
+            </button> 
+ 
+            <button 
+                class="retro-button" 
+                onclick="showPage(4)" 
+            > 
+                4 
+            </button>
+
+            <button 
+                id="button5"
+                class="retro-button" 
+                onclick="pressFive()" 
+            > 
+                5 
+            </button>
+ 
+        </div>
+
+
+        <!-- =================================================
+             ARG WEBSITE CLUE
+             
+             NOT CLICKABLE.
+
+             Decode with ATBASH:
+
+             ghfpzhzxszmm4.trgsfy.rl/wlxfvnmgmh
+
+             =
+
+             tsukasachann4.github.io/documents
+             ================================================= -->
+
+        <div class="arg-url">
+            ghfpzhzxszmm4.trgsfy.rl/wlxfvnmgmh
+        </div>
+ 
+ 
+    </div> 
+ 
+ 
+    <script> 
+ 
+        /* =====================================================
+           ✦✦✦ PAGE CONTENT ✦✦✦
+
+           EDIT ONLY THE DESCRIPTIONS BELOW.
+
+           The images are automatically:
+
+           1.png
+           2.png
+           3.png
+           4.png
+
+           ===================================================== */ 
+ 
+ 
+        const descriptions = { 
+ 
+            1: "5301314", 
+ 
+            2: "praying angel", 
+ 
+            3: "reverse morse atbash code", 
+ 
+            4: "psych ward" 
+ 
+        }; 
+ 
+ 
+        /* ===================================================== 
+           SECRET BUTTON SEQUENCE
+           
+           Required:
+           
+           1 once
+           2 twice
+           3 three times
+           4 four times
+           ===================================================== */
+
+        const secretSequence = [
+            1,
+            2, 2,
+            3, 3, 3,
+            4, 4, 4, 4
+        ];
+
+        let sequencePosition = 0;
+
+
+        /* =====================================================
+           BUTTON 5 STATE
+
+           0 = not unlocked
+           1 = everfree.jpeg
+           2 = rail.mp4
+           ===================================================== */
+
+        let button5Stage = 0;
+
+
+        /* ===================================================== 
+           PAGE DISPLAY
+           ===================================================== */
+ 
+ 
+        function showPage(number) { 
+ 
+            document.getElementById("main-image").src = 
+                number + ".png"; 
+ 
+ 
+            document.getElementById("main-image").alt = 
+                "Image " + number; 
+ 
+ 
+            document.getElementById("description").textContent = 
+                descriptions[number]; 
+ 
+ 
+            const buttons = 
+                document.querySelectorAll(".retro-button"); 
+ 
+ 
+            buttons.forEach(function(button) { 
+                button.classList.remove("active"); 
+            }); 
+ 
+ 
+            buttons[number - 1].classList.add("active");
+
+
+            /* =============================================
+               CHECK SECRET BUTTON SEQUENCE
+               ============================================= */
+
+            if (sequencePosition < secretSequence.length) {
+
+                if (number === secretSequence[sequencePosition]) {
+
+                    sequencePosition++;
+
+                    /* If the whole sequence is complete,
+                       reveal button 5. */
+
+                    if (sequencePosition === secretSequence.length) {
+
+                        document.getElementById("button5").style.display = "inline-block";
+
+                    }
+
+                } else {
+
+                    /* Wrong button resets the sequence. */
+
+                    sequencePosition = 0;
+
+                }
+
+            }
+ 
+        }
+
+
+        /* =====================================================
+           BUTTON 5
+
+           FIRST PRESS:
+           everfree.jpeg
+
+           SECOND PRESS:
+           rail.mp4
+           ===================================================== */
+
+        function pressFive() {
+
+            if (button5Stage === 0) {
+
+                document.getElementById("main-image").src =
+                    "everfree.jpeg";
+
+                document.getElementById("main-image").alt =
+                    "Everfree";
+
+                button5Stage = 1;
+
+            } else if (button5Stage === 1) {
+
+                /* Replace the image with a video */
+
+                const oldImage =
+                    document.getElementById("main-image");
+
+                const video =
+                    document.createElement("video");
+
+                video.id = "main-image";
+
+                video.src = "rail.mp4";
+
+                video.controls = true;
+
+                video.autoplay = true;
+
+                video.loop = false;
+
+                video.muted = false;
+
+                video.style.maxWidth = "100%";
+
+                video.style.maxHeight = "70vh";
+
+                video.style.objectFit = "contain";
+
+                oldImage.replaceWith(video);
+
+                button5Stage = 2;
+
+            }
+
+        }
+ 
+    </script> 
+ 
+</body> 
+</html>
+
